@@ -12,43 +12,30 @@ body {
     background-color: #E8E5DA;
 }
 
-
-:root {
-    --1: #ffffff;
-    --2: #1f2b3e;
-    --3: #acc2ef;
-    --4: #374357;
-    --5: #0b90b4;
-    --6: #cccccc;
-    --7: #000000;
-    --8: #24cc63;
-}
-
 /* 
 
 Table Of Contents
 
-Dahi Bhallay
+"Use Ctrl + G To Go To A Line"
 
-1.Nav Styling
-  i.Hamburger Menu Styling
+1.Nav Styling (line:42)
 
-2.Footer Styling
+2.Footer Styling (Line:148)
 
-3.To Top Styling
+3.To Top Styling (Line:240)
 
-4.Universal Heading Styling
+4.Universal Heading Styling (Line:277)
 
 5.Home Page Styling
-  i.Main Styling
-  ii.Services Styling
-  iii.Trusted Clients
+  i.Main Styling (Line:306)
+  ii.Services Styling (Line:332)
+  iii.Trusted Clients (Line:445)
 
-6.Gallery Page Styling
+6.Gallery Page Styling (Line:472)
 
-7.Contact Page Styling
+7.Contact Page Styling (Line:516)
 
-8.About Styling
+8.About Styling (Line:656)
 
 */
 
@@ -100,8 +87,6 @@ Dahi Bhallay
     background-color: #CDC392;
     padding: 15px 3px;
 }
-
-/* Hamburger Menu Styling */
 
 .icon-menu {
     --gap: 5px;
@@ -262,7 +247,7 @@ i:hover {
     font-size: 1.5rem;
     background-color: #304C89;
     border-radius: 50%;
-    bottom: 10px;
+    bottom: 60px;
     right: 15px;
     z-index: 900;
     opacity: .75;
@@ -271,6 +256,7 @@ i:hover {
     width: 40px;
     text-align: center;
     padding-top: 2px;
+    display: none;
 }
 
 .To-Top i,
@@ -279,8 +265,9 @@ i:hover {
 }
 
 .To-Wtsp {
-    bottom: 60px;
+    bottom: 10px;
     background-color: #24cc63;
+    display: inline-block;
 }
 
 .To-Top:hover,
@@ -570,7 +557,7 @@ i:hover {
 .form-group input {
     width: 100%;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 2px;
     color: #fff;
     background-color: transparent;
     border: 1px solid #fff;
@@ -581,17 +568,6 @@ i:hover {
 .form-group input::placeholder, 
 .form-group textarea::placeholder {
     color: #ffffffc7;
-}
-
-.form-group select {
-    width: 100%;
-    padding: 10px;
-    border-radius: 3px;
-    color: #fff;
-    background-color: #304c89;
-    border: 1px solid #fff;
-    font-size: 1rem;
-    outline: none;
 }
 
 .stars-group {
@@ -611,7 +587,7 @@ i:hover {
 .form-group textarea {
     width: 100%;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 2px;
     resize: none;
     color: #fff;
     height: 120px;

@@ -1,3 +1,5 @@
+// Highlight Current Page Link On Navbar
+
 const navLinks = document.querySelectorAll(".nav-link");
 const currentPage = window.location.href.split("/").pop();
 
@@ -11,14 +13,20 @@ navLinks.forEach(link => {
     }
 });
 
+// Hamburger Menu
+
 document.getElementById('check-icon').addEventListener('click', function () {
     const navList = document.getElementById('nav-list');
     navList.classList.toggle('active');
 });
 
+// Reset Form On Submit
+
 function resetForm() {
     location.reload()
 }
+
+// Rating For Contact Page
 
 document.querySelectorAll('.stars-group span').forEach(function (star, index) {
     star.addEventListener('click', function () {
@@ -59,6 +67,13 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+});
+
+// Show/Hide To Top Button 
+
+const toTop = document.querySelector(".To-Top");
+window.addEventListener("scroll", () => {
+    window.scrollY > 300 ? toTop.style.display = "inline-block" : toTop.style.display = "none";
 });
 
 // AOS Initialization

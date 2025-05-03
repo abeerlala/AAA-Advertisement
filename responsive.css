@@ -1,13 +1,3 @@
-/* Media Queries */
-
-/* @media only screen and (min-width: 1201px) {
-    .gallery {
-        -moz-column-count: 4;
-        -webkit-column-count: 4;
-        column-count: 4;
-    }
-} */
-
 @media (max-width: 1200px) {
     .flip-card {
         width: 350px;
