@@ -12,6 +12,19 @@ body {
     background-color: #E8E5DA;
 }
 
+body::-webkit-scrollbar {
+    width: 5px;
+    position: absolute;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #304C89;
+}
+
+body::-webkit-scrollbar-track {
+    background-color: #E8E5DA;
+}
+
 /* 
 
 Table Of Contents
