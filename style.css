@@ -1,15 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://use.typekit.net/nqg5qto.css");
 
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+    font-family: Muli;
     scroll-behavior: smooth;
 }
 
 body {
-    background-color: var(--1);
+    background-color: #E8E5DA;
 }
 
 
@@ -58,9 +58,12 @@ Dahi Bhallay
     display: flex;
     flex-direction: row;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: var(--2);
+    background-color: #CDC392;
     width: 100%;
     height: 60px;
 }
@@ -77,23 +80,24 @@ Dahi Bhallay
 }
 
 .nav-link {
-    color: var(--1);
+    color: #000;
     text-decoration: none;
     font-size: 1.2rem;
-    transition: all 0.3s linear;
-    padding: 20px 3px;
+    font-weight: 600;
+    transition: border-bottom .3s linear;
+    padding: 20px 3px 12px 3px;
+    border-bottom: 4px solid transparent;
 }
 
-.nav-link:hover {
-    color: var(--2);
-    background-color: var(--1);
-    border-radius: 2px;
-    padding: 3px 3px;
+.nav-link:hover,
+.currentPage {
+    border-bottom: 4px solid #304C89;
+    color: #304C89;
 }
 
 .active {
-    color: var(--2);
-    background-color: var(--2);
+    color: #000;
+    background-color: #CDC392;
     padding: 15px 3px;
 }
 
@@ -121,7 +125,7 @@ Dahi Bhallay
     height: var(--height-bar);
     width: 100%;
     border-radius: .5rem;
-    background-color: #fff;
+    background-color: #000;
 }
 
 .bar--1 {
@@ -161,7 +165,7 @@ Dahi Bhallay
 /* Footer Styling */
 
 footer {
-    background-color: var(--2);
+    background-color: #CDC392;
     padding: 10px 0px;
     width: 100%;
 }
@@ -187,13 +191,14 @@ footer {
 .footer-contact-link {
     text-decoration: none;
     transition: all .3s ease;
-    color: var(--1);
-
+    color: #000;
+    opacity: .8;
 }
 
 .footer-nav-link:hover,
 .footer-contact-link:hover {
-    color: var(--5);
+    color: #000;
+    opacity: 1;
 }
 
 .footer-section-2 {
@@ -222,7 +227,7 @@ footer {
 
 .social-icon__link {
     font-size: 1.5rem;
-    color: var(--2);
+    color: #000;
     margin: 0 10px;
     display: inline-block;
     transition: 0.4s;
@@ -233,8 +238,8 @@ footer {
 }
 
 i {
-    color: var(--1);
-    opacity: 0.9;
+    color: #000;
+    opacity: 0.8;
     transition: all .4s ease;
 }
 
@@ -243,7 +248,7 @@ i:hover {
 }
 
 .footer-section-2 p {
-    color: var(--1);
+    color: #000;
     margin: 15px 0 10px 0;
     font-size: 1rem;
     font-weight: 500;
@@ -251,45 +256,43 @@ i:hover {
 
 /* To Top Styling */
 
-.To-Top {
-    position: fixed;
-    font-size: 1.5rem;
-    background-color: var(--2);
-    padding: 6px 10px;
-    border-radius: 50%;
-    bottom: 15px;
-    right: 15px;
-    z-index: 900;
-    opacity: .75;
-    transition: opacity .4s ease;
-}
-
-.To-Top:hover {
-    opacity: 1;
-}
-
+.To-Top,
 .To-Wtsp {
     position: fixed;
     font-size: 1.5rem;
-    background-color: var(--8);
-    padding: 6px 10px;
+    background-color: #304C89;
     border-radius: 50%;
-    bottom: 65px;
+    bottom: 10px;
     right: 15px;
     z-index: 900;
-    transition: all .4s ease;
     opacity: .75;
     transition: opacity .4s ease;
+    height: 40px;
+    width: 40px;
+    text-align: center;
+    padding-top: 2px;
 }
 
+.To-Top i,
+.To-Wtsp i {
+    color: #fff;
+}
+
+.To-Wtsp {
+    bottom: 60px;
+    background-color: #24cc63;
+}
+
+.To-Top:hover,
 .To-Wtsp:hover {
     opacity: 1;
 }
 
+
 /* Universal Heading Styling */
 
 .text-chng {
-    color: var(--5);
+    color: #304C89;
 }
 
 .h1 {
@@ -307,7 +310,7 @@ i:hover {
     display: inline-block;
     justify-content: center;
     content: " ";
-    border-top: .3rem solid var(--7);
+    border-top: .3rem solid #000;
     width: 4rem;
     margin: 0 1rem;
     transform: translateY(-1rem);
@@ -347,16 +350,47 @@ i:hover {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 100px;
+    justify-content: center;
+    margin-top: 50px;
+    width: 90%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-padding: 10px;
+    scroll-behavior: smooth;
+    height: 420px;
+    justify-self: center;
+    padding: 0 30px;
+}
+
+.slider {
+    width: 100%;
+    position: relative;
 }
 
 .row {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
-    margin-top: 20px;
+    flex-wrap: nowrap;
     gap: 30px;
-    flex-wrap: wrap;
+    animation: scroll 30s linear infinite;
+    width: max-content;
+}
+
+.row:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.services::-webkit-scrollbar {
+    display: none;
 }
 
 .flip-card {
@@ -381,7 +415,7 @@ i:hover {
 
 .flip-card-front,
 .flip-card-back {
-    box-shadow: 0 8px 14px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0px 5px 0 rgba(0, 0, 0, 0.2);
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -391,7 +425,7 @@ i:hover {
     height: 100%;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
-    border-radius: 10px;
+    border-radius: 2px;
 }
 
 .flip-card-front {
@@ -401,8 +435,8 @@ i:hover {
 }
 
 .flip-card-back {
-    background-color: var(--2);
-    color: var(--1);
+    background-color: #304C89;
+    color: #fff;
     transform: rotateY(180deg);
     padding: 20px;
 }
@@ -410,12 +444,12 @@ i:hover {
 .title {
     font-size: 1.5rem;
     font-weight: bold;
-    font-family: "Montserrat";
+    font-family: Muli;
 }
 
 .title-description {
     font-size: 1rem;
-    font-family: "Tahoma", sans-serif;
+    font-family: Muli;
     text-align: justify;
 }
 
@@ -430,12 +464,9 @@ i:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 70px 150px;
+    justify-self: center;
     justify-content: space-between;
-}
-
-.trusted-clients-1::-webkit-scrollbar {
-    width: 5px;
+    gap: 20px;
 }
 
 .trusted-clients img {
@@ -450,7 +481,7 @@ i:hover {
 }
 
 .trusted-clients img:active {
-    scale: .6;
+    scale: .8;
 }
 
 /* Gallery Page Styling */
@@ -472,7 +503,7 @@ i:hover {
 
 .item {
     display: inline-block;
-    background: var(--1);
+    background: #E8E5DA;
     padding: 1em;
     margin: 0 0 1.5em;
     width: 100%;
@@ -480,7 +511,7 @@ i:hover {
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    box-shadow: 0px 0px 10px 0 var(--2);
+    box-shadow: 0px 0px 4px 0 #000;
     border-radius: 10px;
 }
 
@@ -491,7 +522,7 @@ i:hover {
 .gallery-text {
     margin-bottom: 5px;
     font-size: .8rem;
-    color: var(--7);
+    color: #000;
     text-align: center;
 }
 
@@ -499,7 +530,7 @@ i:hover {
 
 .form-container {
     max-width: 450px;
-    background-color: var(--2);
+    background-color: #304c89;
     border: 2px solid transparent;
     padding: 32px 24px;
     font-size: 14px;
@@ -508,7 +539,7 @@ i:hover {
     flex-direction: column;
     gap: 20px;
     box-sizing: border-box;
-    border-radius: 16px;
+    border-radius: 3px;
     background-size: 200% 100%;
     margin: 50px auto;
 }
@@ -531,7 +562,7 @@ i:hover {
 
 .form-group label {
     margin-bottom: 5px;
-    color: var(--1);
+    color: #fff;
     font-weight: bold;
     font-size: 1.1rem;
 }
@@ -540,20 +571,25 @@ i:hover {
     width: 100%;
     padding: 10px;
     border-radius: 3px;
-    color: var(--1);
+    color: #fff;
     background-color: transparent;
-    border: 1px solid var(--1);
+    border: 1px solid #fff;
     font-size: 1rem;
     outline: none;
+}
+
+.form-group input::placeholder, 
+.form-group textarea::placeholder {
+    color: #ffffffc7;
 }
 
 .form-group select {
     width: 100%;
     padding: 10px;
     border-radius: 3px;
-    color: rgba(211, 211, 211, 0.467);
-    background-color: var(--2);
-    border: 1px solid var(--1);
+    color: #fff;
+    background-color: #304c89;
+    border: 1px solid #fff;
     font-size: 1rem;
     outline: none;
 }
@@ -577,10 +613,10 @@ i:hover {
     padding: 10px;
     border-radius: 3px;
     resize: none;
-    color: var(--1);
+    color: #fff;
     height: 120px;
     resize: vertical;
-    border: 1px solid var(--1);
+    border: 1px solid #fff;
     background-color: transparent;
     font-size: 1rem;
     outline: none;
@@ -605,11 +641,11 @@ i:hover {
 .form-submit-btn {
     display: flex;
     justify-content: center;
-    color: var(--1);
+    color: #fff;
     font-weight: bold;
     width: 100%;
-    background-color: var(--2);
-    border: 2px solid var(--1);
+    background-color: #304c89;
+    border: 2px solid #fff;
     padding: 12px;
     gap: 8px;
     margin-top: 8px;
@@ -620,15 +656,15 @@ i:hover {
 }
 
 .form-submit-btn:hover {
-    color: var(--2);
-    border: 2px solid var(--1);
-    background-color: var(--1);
+    color: #000;
+    border: 2px solid #CDC392;
+    background-color: #CDC392;
 }
 
 .contact-reset {
     cursor: pointer;
     font-size: 1rem;
-    border-bottom: 2px solid var(--1);
+    border-bottom: 2px solid #fff;
     height: 19px;
 }
 
@@ -643,19 +679,8 @@ i:hover {
     justify-content: center;
 }
 
-.about-h2 {
-    font-size: 2rem;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    color: var(--5);
-}
-
 .about-strong {
-    color: var(--2);
-}
-
-.strong-head {
-    font-size: 1.6rem;
+    color: #304C89;
 }
 
 .about-ul li {
@@ -678,7 +703,7 @@ i:hover {
 }
 
 .accordion {
-    background-color: var(--2);
+    background-color: #304C89;
     color: #fff;
     padding: 15px;
     width: 100%;
@@ -696,7 +721,8 @@ i:hover {
 .accordion-content {
     padding: 10px 15px;
     border-radius: 2px;
-    background-color: #f0f0f0;
+    background-color: #E8E5DA;
+    box-shadow: 0 0 5px #000;
 }
 
 .accordion-content p,

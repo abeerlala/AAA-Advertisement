@@ -1,3 +1,16 @@
+const navLinks = document.querySelectorAll(".nav-link");
+const currentPage = window.location.href.split("/").pop();
+
+navLinks.forEach(link => {
+    const linkHref = link.getAttribute("href");
+    if (linkHref === currentPage) {
+        link.classList.add("currentPage")
+    } else if (currentPage === "") {
+        const homeLink = document.querySelector("#homeLink");
+        homeLink.classList.add("currentPage")
+    }
+});
+
 document.getElementById('check-icon').addEventListener('click', function () {
     const navList = document.getElementById('nav-list');
     navList.classList.toggle('active');
@@ -7,8 +20,8 @@ function resetForm() {
     location.reload()
 }
 
-document.querySelectorAll('.stars-group span').forEach(function(star, index) {
-    star.addEventListener('click', function() {
+document.querySelectorAll('.stars-group span').forEach(function (star, index) {
+    star.addEventListener('click', function () {
         let stars = document.querySelectorAll('.stars-group span i');
         for (let i = 0; i < stars.length; i++) {
             if (i <= index) {
