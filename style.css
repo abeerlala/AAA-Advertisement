@@ -371,7 +371,7 @@ i:hover {
     display: flex;
     flex-wrap: nowrap;
     gap: 30px;
-    /* animation: scroll 30s linear infinite; */
+    animation: scroll 30s linear infinite;
     width: max-content;
 }
 
