@@ -1,8 +1,4 @@
 @media (max-width: 1200px) {
-    .flip-card {
-        width: 350px;
-    }
-
     .h1::after,
     .h1::before {
         display: none;
@@ -76,21 +72,6 @@
 
     .row {
         animation: scroll 50s linear infinite;
-    }
-
-    .flip-card {
-        width: 290px;
-        height: 290px;
-    }
-
-    .title {
-        font-size: 1.2rem;
-    }
-
-    .title-description {
-        font-size: .8rem;
-        font-family: Muli;
-
     }
 
     .footer-nav-list {
@@ -171,6 +152,14 @@
         margin: 0 5px;
     }
 
+    .serviceCard {
+        width: 300px;
+    }
+
+    .serviceCard img {
+        width: 280px;
+        height: 150px;
+    }
 }
 
 @media (max-width: 330px) {
