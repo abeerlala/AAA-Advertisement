@@ -35,6 +35,7 @@
         align-items: center;
         justify-content: center;
         width: 100%;
+        height: calc(100vh - 60px);
         gap: 15px;
         padding: 15px 0;
         position: absolute;
@@ -66,14 +67,6 @@
         display: flex;
     }
 
-    .services {
-        width: 95%;
-    }
-
-    .row {
-        animation: scroll 50s linear infinite;
-    }
-
     .footer-nav-list {
         display: none;
     }
@@ -100,6 +93,29 @@
     .company-tagline {
         font-size: .9rem;
     }
+
+    .service {
+        flex-direction: column;
+    }
+
+    .reverse {
+        flex-direction: column;
+    }
+
+    .serviceText {
+        width: 100%;
+        height: 50%;
+    }
+
+    .service p {
+        width: 100%;
+    }
+
+    .service img {
+        width: 90%;
+        margin-top: 30px;
+        height: 50%;
+    }
 }
 
 @media (max-width: 495px) {
@@ -123,10 +139,6 @@
         font-size: .5rem;
     }
 
-    .footer-logo {
-        height: 120px;
-    }
-
     .form-container {
         width: 300px;
     }
@@ -144,7 +156,7 @@
     }
 
     .footer-logo {
-        height: 100px;
+        height: 50px;
     }
 
     .about-main {
@@ -152,14 +164,6 @@
         margin: 0 5px;
     }
 
-    .serviceCard {
-        width: 300px;
-    }
-
-    .serviceCard img {
-        width: 280px;
-        height: 150px;
-    }
 }
 
 @media (max-width: 330px) {

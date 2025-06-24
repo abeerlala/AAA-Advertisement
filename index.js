@@ -76,6 +76,13 @@ window.addEventListener("scroll", () => {
     window.scrollY > 300 ? toTop.style.display = "inline-block" : toTop.style.display = "none";
 });
 
+// Change Navbar on scroll 
+
+const navbar = document.querySelector(".nav-container");
+window.addEventListener("scroll", () => {
+    window.scrollY > 50 ? navbar.classList.add("scrolledNav") : navbar.classList.remove("scrolledNav");
+});
+
 // AOS Initialization
 
 AOS.init();
